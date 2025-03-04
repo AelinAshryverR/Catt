@@ -5,7 +5,7 @@
     <title>Záverečná práca</title>
 </head>
 <body>
-    <h1>Záverečná práca</h1>
+    <h1>Catt</h1>
     <p>Vložte odkaz na YouTube video:</p>
     <input type="text" id="youtubeUrl" placeholder="Vložte URL videa">
     <button id="addVideoButton">Pridať video</button> <!-- Odstránil som onclick atribút -->
@@ -16,22 +16,24 @@
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js';
         import { getFirestore, collection, addDoc, getDocs, deleteDoc, query, where } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js';
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js';
 
         // Firebase konfigurácia
-       const firebaseConfig = {
-  apiKey: "AIzaSyCvyuJqsq04GMnq0WkpdWPteQjLkfhnXQY",
-  authDomain: "praca-2a46b.firebaseapp.com",
-  databaseURL: "https://praca-2a46b-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "praca-2a46b",
-  storageBucket: "praca-2a46b.firebasestorage.app",
-  messagingSenderId: "93263480759",
-  appId: "1:93263480759:web:df79fa529c73798e79ca32",
-  measurementId: "G-C8CL8ZV67N"
-};
+        const firebaseConfig = {
+            apiKey: "AIzaSyCvyuJqsq04GMnq0WkpdWPteQjLkfhnXQY",
+            authDomain: "praca-2a46b.firebaseapp.com",
+            databaseURL: "https://praca-2a46b-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "praca-2a46b",
+            storageBucket: "praca-2a46b.firebasestorage.app",
+            messagingSenderId: "93263480759",
+            appId: "1:93263480759:web:df79fa529c73798e79ca32",
+            measurementId: "G-C8CL8ZV67N"
+        };
 
-       // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);  // Import and initialize analytics
+        const db = getFirestore(app);  // Initialize Firestore
 
         console.log("Firebase inicializovaný");
 
@@ -138,6 +140,6 @@ const analytics = getAnalytics(app);
         });
     </script>
     <p>Príspevok na vedeckú a akademickú činnosť: <a href="https://paypal.me/milanhricko1" target="_blank">paypal.me/milanhricko1</a></p>
-    <p>Mini Hra: <a href="https://aelinashryverr.github.io/hra/"target="_blank">github.io/hra/</a></p>
+    <p>Mini Hra: <a href="https://aelinashryverr.github.io/hra/" target="_blank">github.io/hra/</a></p>
 </body>
 </html>

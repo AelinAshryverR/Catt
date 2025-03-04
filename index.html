@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catt</title>
+    <title>Záverečná práca</title>
 </head>
 <body>
     <h1>Catt</h1>
@@ -14,9 +14,9 @@
 
     <!-- Firebase SDK -->
     <script type="module">
-    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js';
-    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js'; // Correct import for analytics
-    import { getFirestore, collection, addDoc, getDocs, deleteDoc, query, where } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js';
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js';
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js'; // Correct path for Analytics
+        import { getFirestore, collection, addDoc, getDocs, deleteDoc, query, where } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js';
 
         // Firebase konfigurácia
         const firebaseConfig = {
@@ -32,7 +32,9 @@
 
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);  // Import and initialize analytics
+
+        // Initialize Firebase Analytics
+        const analytics = getAnalytics(app);  // Now this should work
         const db = getFirestore(app);  // Initialize Firestore
 
         console.log("Firebase inicializovaný");
